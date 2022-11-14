@@ -1,0 +1,191 @@
+.footer {
+    position: relative;
+    font-size: 12px;
+}
+
+.footer-area {
+    padding: 50px 0;
+    row-gap: 50px;
+
+    @include tablet_ {
+        padding: 25px 0;
+        row-gap: 25px;
+    }
+
+    &.gutter {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        @include tablet_ {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
+    &.grid {
+        gap: 15px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include tablet_ {
+            gap: 25px;
+            grid-template-columns: repeat(7, 1fr);
+        }
+    }
+
+    .group-logo {
+        grid-row: 1;
+        grid-column: 1 / span 4;
+
+        @include tablet_ {
+            grid-column: 1 / span 2;
+            padding-right: 25px;
+        }
+
+        .footer-logo {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 50px;
+        }
+
+        .newsletter-wrap {
+            .titleis {
+                display: block;
+                opacity: 0.5;
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .input-name {
+            width: 100%;
+            border: none;
+            margin: -1px 0 0 0;
+            outline: none;
+            padding: 10px 30px 10px 0;
+            font-size: 12px;
+            border-top: 1px solid $border;
+            box-shadow: none;
+            border-bottom: 1px solid $border;
+            border-radius: 0;
+            background-color: transparent;
+        }
+
+        .email-box {
+            position: relative;
+        }
+
+        .link-arrow {
+            top: 50%;
+            right: 0;
+            width: 18px;
+            border: none;
+            cursor: pointer;
+            height: 30px;
+            margin: 0;
+            display: flex;
+            padding: 0;
+            overflow: hidden;
+            position: absolute;
+            transform: translate(0, -50%);
+            align-items: center;
+            justify-content: flex-end;
+            background-color: transparent;
+
+            .arrow {
+                width: 18px;
+                transition: transform 0.35s cubic-bezier(0.61, 1, 0.88, 1);
+                flex-shrink: 0;
+            }
+        }
+
+
+    }
+
+    .decor-info {
+        margin: 0;
+        grid-row: 7;
+        font-size: 12px;
+        text-align: center;
+        grid-column: 1 / span 4;
+        margin-bottom: 60px;
+
+        @include tablet_ {
+            grid-row: 2;
+            margin-top: 280px;
+            text-align: left;
+            grid-column: 1 / span 2;
+            margin-bottom: 0;
+            padding-right: 50px;
+        }
+    }
+
+
+    .group-sns {
+        grid-row: 5;
+        grid-column: 1 / span 2;
+
+        @include tablet_ {
+            grid-row: 1;
+            grid-column: 3 / span 2;
+        }
+
+        .titleis {
+            font-size: 10px;
+            font-family: "ABCMonumentGroteskMono", "Lucida Sans", Tahoma, sans-serif;
+            line-height: 1.2;
+            white-space: pre-wrap;
+            text-transform: uppercase;
+            display: block;
+            opacity: 0.5;
+            margin-bottom: 15px;
+
+        }
+
+
+        .sns-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            .link-sns {
+                line-height: 1.8;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .group-copyrights {
+
+        grid-row: 5;
+        grid-column: 3 / span 2;
+
+        @include tablet_ {
+            grid-row: 2;
+            align-self: end;
+            grid-column: 3 / span 2;
+        }
+
+
+        .logo-wrap {
+            margin: 0 -5px 15px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 20em;
+
+            @include tablet_ {
+                margin: 0 -5px 30px
+            }
+        }
+
+        .good {
+            width: auto;
+            height: 34px;
+            margin: 5px 5px;
+        }
+    }
+}

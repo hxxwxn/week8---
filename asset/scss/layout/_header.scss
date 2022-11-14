@@ -1,0 +1,131 @@
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1002;
+    position: fixed;
+    background-color: $background;
+    display: flex;
+
+    .gnb {
+        width: 100%;
+        padding: 12px 15px;
+
+        @include tablet_ {
+            padding: 12px 25px;
+        }
+
+        &-list {
+            width: 100%;
+            display: flex;
+            margin: 0 -7.5px;
+            padding: 0;
+            list-style: none;
+            justify-content: space-between;
+
+            @include tablet_ {
+                margin: 0 -12.5px;
+
+            }
+
+
+            .logo-link {
+                color: currentColor;
+                display: flex;
+                min-height: 50px;
+                align-items: center;
+                text-decoration: none;
+            }
+        }
+
+        &-item {
+            display: none;
+            flex: 1;
+            margin: 0 7.5px;
+            // opacity: 0;
+
+            @include tablet_ {
+                margin: 0 12.5px;
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+        &-link {
+            color: currentColor;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            font-size: 10px;
+            background: transparent;
+            min-height: 42px;
+            align-items: center;
+            font-family: "NHaasGroteskTXPro", "Lucida Sans", Tahoma, sans-serif;
+            line-height: 1.2;
+            border-radius: 0;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+
+
+            &::after {
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                content: "";
+                display: block;
+                position: absolute;
+                transform: translate(-110%, 1.2em);
+                transition: transform 0.15s ease-in-out;
+                background-color: currentColor;
+                transform-origin: 0% 50%;
+
+            }
+
+            .count {
+                margin-left: 5px;
+                border: 1px solid currentColor;
+                display: inline-flex;
+                align-items: center;
+                font-size: 9px;
+                width: 20px;
+                height: 20px;
+                align-items: center;
+                font-family: "ABCMonumentGroteskMono", "Lucida Sans", Tahoma, sans-serif;
+                border-radius: 50%;
+                justify-content: center;
+
+                @include tablet_ {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.cart-box {
+    &.gnb-link {
+        &::after {
+            right: 22px;
+        }
+    }
+}
+
+
+
+
+.header .gnb-link:hover::after,
+.link-0-3-15.active:after,
+.link-0-3-15.selected:after {
+    transform: translate(0%, 1.2em);
+}
